@@ -1,6 +1,6 @@
 --- 
 cwd: /var/www/apps/test
-log_file: log/mongrel.log
+log_file: /var/www/apps/test/shared/log/mongrel.log
 user: deploy
 group: deploy
 port: "8000"
