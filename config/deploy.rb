@@ -18,3 +18,12 @@ set :user, "deploy"
 role :app, "wimbledon"
 role :web, "wimbledon"
 role :db,  "wimbledon", :primary => true
+
+namespace :deploy do
+  %w(restart stop start).each do |command|
+    task command.to_sym, :roles => :app do
+      sudo "/usr/sbin/monit #{command} all -g #{monit_group}"
+    end
+  end
+end
+
