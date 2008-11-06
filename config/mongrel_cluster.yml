@@ -5,5 +5,5 @@ user: deploy
 group: deploy
 port: "8000"
 environment: production
-pid_file: tmp/pids/mongrel.pid
+pid_file: /var/www/apps/test/current/tmp/pids/mongrel.pid
 servers: 3
