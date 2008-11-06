@@ -14,6 +14,7 @@ set :branch, "master"
 default_run_options[:pty] = true
 set :ssh_options, { :forward_agent => true }
 set :user, "deploy"
+set :monit_group, 'mongrel'
 
 role :app, "wimbledon"
 role :web, "wimbledon"
